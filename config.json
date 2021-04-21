@@ -1,0 +1,12 @@
+{
+  "puerto": {
+    "cliente": 3000,
+    "servidor": 4000
+  },
+  "bd": {
+    "_NOTA": "Se separa dburl porque el pasword necesita codificar los caracteres especiales como url",
+    "dbUrl1": "mongodb://jams:",
+    "contrasena": "proyecto06",
+    "dbUrl2": "@clusterjams-shard-00-00-bwmen.mongodb.net:27017,clusterjams-shard-00-01-bwmen.mongodb.net:27017,clusterjams-shard-00-02-bwmen.mongodb.net:27017/MEP?ssl=true&replicaSet=clusterJAMS-shard-0&authSource=admin&retryWrites=true"
+  }
+}
