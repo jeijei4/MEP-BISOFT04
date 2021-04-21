@@ -25,9 +25,12 @@ const ColorBackEnd = tiza.rgb(248, 260, 190).bgBlack,
 /**
  * Se definen las variables necesarias para la conexión con MongoDB
  */
-const Port = 4000 || 4001,
-Dburl = 'mongodb://jams:'+encodeURIComponent('proyecto06')+'@clusterjams-shard-00-00-bwmen.mongodb.net:27017,clusterjams-shard-00-01-bwmen.mongodb.net:27017,clusterjams-shard-00-02-bwmen.mongodb.net:27017/MEP?ssl=true&replicaSet=clusterJAMS-shard-0&authSource=admin&retryWrites=true';
-
+const Config = require('../config') || {},
+    Url1 = Config.bd.dbUrl1 || '',
+    DbContrasena = encodeURIComponent(Config.bd.contrasena) || '',
+    Url2 = Config.bd.dbUrl2 || '',
+    Dburl = `${Url1}${DbContrasena}${Url2}`,
+    Port = Config.puerto.servidor || 4001;
 
 /**
  * Usar Promise con bluebird
